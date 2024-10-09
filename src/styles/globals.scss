@@ -1,0 +1,41 @@
+@import './variables';
+@import './mixins';
+
+/* General */
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+
+.bodyStyle {
+    height: 100vh;
+    background: $default-bg-color;
+    color: white;
+    font-family: $global-font-family, sans-serif;
+    background-color: $swatch-1;
+}
+
+.contentContainer {
+    display: flex;
+    width: 1400px;
+    flex-direction: column;
+    justify-content: start;
+}
+
+@media (max-width: $screen-lg) {
+    .contentContainer {
+        width: 960px;
+    }
+}
+
+@media (max-width: $screen-md) {
+    .contentContainer {
+        width: 90%;
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .contentContainer {
+        width: 90%;
+    }
+}

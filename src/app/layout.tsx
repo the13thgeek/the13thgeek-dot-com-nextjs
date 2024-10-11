@@ -1,7 +1,9 @@
 // import type { Metadata } from "next";
 // import localFont from "next/font/local";
+import { title } from "process";
 import "../styles/globals.scss";
 import Navbar from './components/Navbar/Navbar';
+import Footer from "./components/Footer/Footer";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -20,7 +22,7 @@ import Navbar from './components/Navbar/Navbar';
 // };
 
 export const metadata = {
-  title: "the13thgeek",
+  title: process.env.NEXT_PUBLIC_GLOBAL_SITE_TITLE,
   description: "testing",
 };
 
@@ -39,10 +41,11 @@ export default function RootLayout({
         <script src="https://kit.fontawesome.com/4cf523be80.js" crossOrigin="anonymous"></script>
       </head>
       <body className="bodyStyle">
-        <header>
+        <header className="headerMain">
           <Navbar />
         </header>
         {children}
+        <Footer />
       </body>
     </html>
   );

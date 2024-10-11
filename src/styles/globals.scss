@@ -7,12 +7,23 @@
 //     padding: 0;
 // }
 
+.sectionGlobal, .footerGlobal {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+    width: 100%;
+    cursor: default;
+    overflow: hidden;
+}
+
 .bodyStyle {
     height: 100vh;
     background: $default-bg-color;
     color: white;
     font-family: $global-font-family, sans-serif;
     background-color: $swatch-1;
+    margin: 0;
 }
 
 .contentContainer {
@@ -20,6 +31,14 @@
     width: 1400px;
     flex-direction: column;
     justify-content: start;
+}
+
+.headerMain {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #000;
 }
 
 @media (max-width: $screen-lg) {
